@@ -1,0 +1,11 @@
+# Nessus Vulnerability Scanner
+# MAINTAINED by Praveen Darshanam <cHJhdmVlbmQuaGFjQGdtYWlsLmNvbQo=>
+
+version: '3.3'
+
+services:
+  nessus:
+    restart: always
+    build: nessus-scanner
+    ports:
+      - 9934:8834
