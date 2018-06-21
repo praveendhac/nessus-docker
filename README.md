@@ -1,5 +1,11 @@
-## nessus-docker
-# Latest Nessus Vulnerability Scanner
+
+## Latest Nessus Vulnerability Scanner
+Checkout the code using
+$ git clone https://github.com/praveendhac/nessus-docker
+
+$cd nessus-docker
+
+Execute below commans to build docker image and Container
 ```
 $ docker-compose -f docker-compose.yaml up
 Building nessus
@@ -56,6 +62,23 @@ nessus_1  | Processing the Nessus plugins...
 nessus_1  |
 nessus_1  | All plugins loaded (1sec)
 ```
+
+Execute below commans to view list of running containers
+```
 $ docker ps
 CONTAINER ID  IMAGE                 COMMAND                 CREATED             STATUS              PORTS                   NAMES
 6d330adac564  nessus-docker_nessus  "/opt/nessus/sbin/ne…"  About a minute ago  Up About a minute   0.0.0.0:9934->8834/tcp  nessus-docker_nessus_1
+```
+Withing container nessusd listens on 8834, exposing usin 9934/tcp on host machine. Using 9934 to overcome port binding issues if someone already installed nessus on their local host.
+
+If the container has successfully started, we can access it from browser using
+https://localhost:9934
+At step 1, create username, password
+![alt text](images/nessus_create_account.png)
+
+At step 2, generate "Activation Code". (search google for "nessus + activation code")
+![alt text](images/nessus_activation.png)
+
+Nessus starts initializing
+![alt text](images/nessus_initializing.png)
+
