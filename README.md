@@ -73,12 +73,16 @@ Withing container nessusd listens on 8834, exposing usin 9934/tcp on host machin
 
 If the container has successfully started, we can access it from browser using
 https://localhost:9934
+
 At step 1, create username, password
+
 ![alt text](images/nessus_create_account.png)
 
 At step 2, generate "Activation Code". (search google for "nessus + activation code")
+
 ![alt text](images/nessus_activation.png)
 
 Nessus starts initializing
+
 ![alt text](images/nessus_initializing.png)
 
