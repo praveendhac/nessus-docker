@@ -3,10 +3,10 @@
 Checkout the code using
 ```
 $ git clone https://github.com/praveendhac/nessus-docker
-$cd nessus-docker
+$ cd nessus-docker
 ```
 
-Execute below commans to build docker image and Container
+Execute below commans to build docker image and start nessus Container
 ```
 $ docker-compose -f docker-compose.yaml up
 Building nessus
@@ -87,3 +87,7 @@ Nessus starts initializing
 
 ![alt text](images/nessus_initializing.png)
 
+We can login to the container using, we got the id from `docker ps` command
+```
+$ docker exec -it 6d330adac564 bash
+```
