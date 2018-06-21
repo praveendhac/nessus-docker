@@ -75,19 +75,19 @@ CONTAINER ID  IMAGE                 COMMAND                 CREATED             
 * If the container has successfully started, we can access it from browser using
 https://localhost:9934
 
-** At step 1, create username, password
+- At step 1, create username, password
 
 ![alt text](images/nessus_create_account.png)
 
-** At step 2, generate "Activation Code". (search google for "nessus + activation code")
+- At step 2, generate "Activation Code". (search google for "nessus + activation code")
 
 ![alt text](images/nessus_activation.png)
 
-** At step 3, Nessus starts initializing
+- At step 3, Nessus starts initializing
 
 ![alt text](images/nessus_initializing.png)
 
-We can login to the container using, we got the id from `docker ps` command
+* We can login to the container using, we got the id from `docker ps` command
 ```
 $ docker exec -it 6d330adac564 bash
 ```
