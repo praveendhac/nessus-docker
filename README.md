@@ -1,9 +1,10 @@
 
 ## Latest Nessus Vulnerability Scanner
 Checkout the code using
+```
 $ git clone https://github.com/praveendhac/nessus-docker
-
 $cd nessus-docker
+```
 
 Execute below commans to build docker image and Container
 ```
