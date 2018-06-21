@@ -91,3 +91,9 @@ We can login to the container using, we got the id from `docker ps` command
 ```
 $ docker exec -it 6d330adac564 bash
 ```
+
+# To build docker image of different OS
+We need to modify `nessus-scanner/Dockerfile`, nothing to modify in `docker-compose.yaml`
+* Change `FROM` to the OS of your interest
+* Change `RUN` commands reflecting the OS, say using yum, apk etc.
+* Change `ENTRYPOINT` reflecting the path where nessus is installed
