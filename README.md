@@ -87,14 +87,14 @@ https://localhost:9934
 
 ![alt text](images/nessus_initializing.png)
 
-* We can login to the container using, we got the id from `docker ps` command
+* We can login to the container using below command (got the id from `docker ps` command)
 ```
 $ docker exec -it 6d330adac564 bash
 ```
 
 # To build docker image of different OS
 We need to modify `nessus-scanner/Dockerfile`, nothing to modify in `docker-compose.yaml`
-* Change `FROM` to the OS of your interest
+* Change `FROM` to the OS of your interest (`FROM ubuntu:16.04` to `FROM centos:7`)
 * Change `RUN` commands reflecting the OS, say using yum, apk etc.
 * Download image specific to the OS of interest, place it in `nessus-scanner` directory
 * `RUN` the installation command specific to OS (dpkg, rpm, apk add etc.)
